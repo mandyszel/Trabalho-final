@@ -13,7 +13,17 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", function (req, res) {
-  res.send("Olá Amanda");
+  res.render("index.ejs", {});
+});
+
+app.get("/usuarios", function (req, res) {
+  res.render("usuarios.ejs", {
+    usuarios: [
+      { nome: "Amanda", email: "amandaszelag@gmail.com" },
+      { nome: "Marianna", email: "MariannaDias@gmail.com" },
+      { nome: "Diego", email: "Diegoporcellis@gmail.com" },
+    ],
+  });
 });
 
 app.listen(3000, function () {
