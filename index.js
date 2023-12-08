@@ -9,8 +9,8 @@ app.get("/mensagem", function (req, res) {
   res.send("Essa mensagem é automática");
 });
 
-app.get("/sobre", function (req, res) {
-  res.send("Esta pagina esta sendo desenvolvida por amanda");
+app.get("/layout", function (req, res) {
+  res.send("Esta é o novo layout");
 });
 
 app.listen(3000, function () {
