@@ -31,7 +31,7 @@ app.get("/add", function (req, res) {
 });
 
 app.post("/add", function (req, res) {
-  console.log("deu certo");
+  console.log("Nome: "+req.body.txtNome+" Email: "+req.body.txtEmail);
 });
 
 app.listen(3000, function () {
